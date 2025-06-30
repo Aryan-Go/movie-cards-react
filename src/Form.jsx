@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { toast, Bounce } from 'react-toastify';
 
 const Form = (props) => {
     const movie_details = props.movie_details;
@@ -41,6 +42,17 @@ const Form = (props) => {
     set_rating_name("");
     set_description_name("");
     set_movie_name("");
+    toast.success('🦄 The movie details has been submitted!', {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Bounce,
+      });
   }
     console.log(movie_details);
   return (
